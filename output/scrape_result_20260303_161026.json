@@ -1,0 +1,49 @@
+[
+  {
+    "url": "https://x.COM",
+    "metadata": {
+      "url": "https://x.COM",
+      "title": "",
+      "description": "",
+      "keywords": "",
+      "author": "",
+      "og_title": "",
+      "og_description": "",
+      "og_image": ""
+    },
+    "text": "JavaScript 不可用。\nWe’ve detected that JavaScript is disabled in this browser. Please enable JavaScript or switch to a supported browser to continue using x.com. You can see a list of supported browsers in our Help Center.\n帮助中心\n服务条款\n隐私政策\nCookie 政策\nImprint\n广告信息\n© 2026 X Corp.\nSomething went wrong, but don’t fret — let’s give it another shot.\nTry again\nSome privacy related extensions may cause issues on x.com. Please disable them and try again.",
+    "links": [
+      {
+        "text": "帮助中心",
+        "url": "https://help.x.com/using-x/x-supported-browsers"
+      },
+      {
+        "text": "服务条款",
+        "url": "https://x.com/tos"
+      },
+      {
+        "text": "隐私政策",
+        "url": "https://x.com/privacy"
+      },
+      {
+        "text": "Cookie 政策",
+        "url": "https://support.x.com/articles/20170514"
+      },
+      {
+        "text": "Imprint",
+        "url": "https://legal.twitter.com/imprint.html"
+      },
+      {
+        "text": "广告信息",
+        "url": "https://business.twitter.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo"
+      }
+    ],
+    "images": [
+      {
+        "src": "https://abs-0.twimg.com/emoji/v2/svg/26a0.svg",
+        "alt": "⚠️"
+      }
+    ],
+    "tables": []
+  }
+]

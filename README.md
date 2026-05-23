@@ -1,8 +1,38 @@
-# 🕷️ 智能网页爬虫工具 (Smart Web Scraper)
+# Smart-Web-Scraper
 
-一个功能强大的智能网页爬虫工具，带有友好的 Streamlit 用户界面。
+通用网页抓取工具：requests + BeautifulSoup 拿原始 HTML / 清洗后文本，再接 LLM 智能字段提取层把"给一个 URL 拿一组结构化字段"做到不写 CSS selector。
 
-## ✨ 功能特性
+## v2 LLM 智能字段提取
+
+不用手写 selector，给一句话描述要的字段，LLM 直接给结构化 JSON：
+
+```bash
+python __main__.py extract https://example.com/product/123 \
+    --schema "提取商品名、价格、库存状态、评分" -o data.json
+
+# 也可以传 JSON schema：
+python __main__.py extract https://news.site/article/xyz \
+    --schema '{"title":"str","author":"str","publish_date":"str","summary":"str"}'
+```
+
+LLM 三 backend：`openai` / `anthropic` / `deepseek`，默认 deepseek（性价比高 + 中文友好）。
+
+库调用：
+
+```python
+from llm_extractor import LLMExtractor, LLMClient
+
+extractor = LLMExtractor(LLMClient(backend="deepseek"))
+result = extractor.extract_from_url(
+    "https://example.com/product/123",
+    schema="提取商品名、价格、库存、评分",
+)
+print(result.fields)  # {"name": "...", "price": ..., "in_stock": ..., "rating": ...}
+```
+
+适合：商品页 / 新闻页 / 个人资料页等结构相对固定但页面常改版的场景。代价是每次抽取要调一次 LLM。
+
+## v1 基础功能（仍保留）
 
 ### 🎯 多种爬取模式
 - **单页爬取**: 快速抓取单个网页的完整内容

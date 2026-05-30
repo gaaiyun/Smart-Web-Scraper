@@ -56,7 +56,7 @@ print(result.fields)  # {"name": "...", "price": ..., "in_stock": ..., "rating":
 - 结果预览（文本、链接、图片、表格、元数据）
 - 一键数据下载
 
-## 🚀 快速开始
+## 快速开始
 
 ### 1. 安装依赖
 
@@ -78,7 +78,7 @@ streamlit run dashboard.py
 #### 单页爬取
 1. 选择"单页爬取"模式
 2. 输入 URL（如：https://www.example.com）
-3. 点击"🚀 开始爬取"
+3. 点击"开始爬取"
 4. 查看结果并导出
 
 #### 批量爬取
@@ -225,7 +225,3 @@ MIT License
 ## 📧 联系方式
 
 如有问题或建议，请提交 Issue。
-
----
-
-**Made with ❤️ by Smart Web Scraper Team**

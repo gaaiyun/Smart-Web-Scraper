@@ -6,6 +6,7 @@ Smart Web Scraper Core Module
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import io
 import json
 import re
 from urllib.parse import urljoin, urlparse
@@ -140,9 +141,9 @@ class SmartScraper:
         
         for table_tag in soup.find_all('table'):
             try:
-                df = pd.read_html(str(table_tag))[0]
+                df = pd.read_html(io.StringIO(str(table_tag)))[0]
                 tables.append(df)
-            except:
+            except (ValueError, ImportError):
                 continue
         
         return tables
